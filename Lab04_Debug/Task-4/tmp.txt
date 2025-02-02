@@ -1,0 +1,511 @@
+--------------------------------------------------------------------------------
+Command:            ./sort_test 20000
+Massif arguments:   (none)
+ms_print arguments: massif.out.66150
+--------------------------------------------------------------------------------
+
+
+    KB
+235.8^                                                         :       :      
+     |             #::::::::::::: ::::::::::::: :::::::::::@ ::::@::::@:@:    
+     |             #::::::: ::: : :::: :: ::::  ::::::: :::@:::::@:: :@:@::   
+     |             #::::::: ::: :@:::: :: ::::  ::::::: :::@:::::@:: :@:@:@   
+     |             #::::::: ::: :@:::: :: ::::  ::::::: :::@:::::@:: :@:@:@   
+     |             #::::::: ::: :@:::: :: ::::  ::::::: :::@:::::@:: :@:@:@   
+     |             #::::::: ::: :@:::: :: :::: @::::::: :::@:::::@:: :@:@:@:  
+     |             #::::::: ::: :@:::: :: :::: @::::::: :::@:::::@:: :@:@:@:  
+     |             #::::::: ::: :@:::: :: :::: @::::::: :::@:::::@:: :@:@:@:  
+     |             #::::::: ::: :@:::: :: :::: @::::::: :::@:::::@:: :@:@:@:  
+     |             #::::::: ::: :@:::: :: :::: @::::::: :::@:::::@:: :@:@:@:: 
+     |             #::::::: ::: :@:::: :: :::: @::::::: :::@:::::@:: :@:@:@:: 
+     |             #::::::: ::: :@:::: :: :::: @::::::: :::@:::::@:: :@:@:@:: 
+     |             #::::::: ::: :@:::: :: :::: @::::::: :::@:::::@:: :@:@:@:: 
+     |:::::::::::::#::::::: ::: :@:::: :: :::: @::::::: :::@:::::@:: :@:@:@:: 
+     |:            #::::::: ::: :@:::: :: :::: @::::::: :::@:::::@:: :@:@:@:: 
+     |:            #::::::: ::: :@:::: :: :::: @::::::: :::@:::::@:: :@:@:@:: 
+     |:            #::::::: ::: :@:::: :: :::: @::::::: :::@:::::@:: :@:@:@:: 
+     |:            #::::::: ::: :@:::: :: :::: @::::::: :::@:::::@:: :@:@:@:: 
+     |:            #::::::: ::: :@:::: :: :::: @::::::: :::@:::::@:: :@:@:@:: 
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   10.81
+
+Number of snapshots: 75
+ Detailed snapshots: [3 (peak), 16, 28, 39, 45, 51, 61, 71]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        117,038           81,040           81,024            16            0
+  2      2,120,621          121,048          121,024            24            0
+  3      2,147,872          241,392          241,000           392            0
+99.84% (241,000B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->33.14% (80,000B) 0x1089B3: main (main.c:34)
+| 
+->33.14% (79,996B) 0x108E8F: merge_sort (sort_funcs.c:26)
+| ->16.57% (40,000B) 0x108AC7: main (main.c:46)
+| | 
+| ->16.57% (39,996B) 0x108ED7: merge_sort (sort_funcs.c:33)
+|   ->08.29% (20,000B) 0x108AC7: main (main.c:46)
+|   | 
+|   ->08.28% (19,996B) 0x108ED7: merge_sort (sort_funcs.c:33)
+|     ->04.14% (10,000B) 0x108AC7: main (main.c:46)
+|     | 
+|     ->04.14% (9,996B) 0x108ED7: merge_sort (sort_funcs.c:33)
+|       ->02.07% (5,000B) 0x108AC7: main (main.c:46)
+|       | 
+|       ->02.07% (4,996B) 0x108ED7: merge_sort (sort_funcs.c:33)
+|         ->01.04% (2,500B) 0x108AC7: main (main.c:46)
+|         | 
+|         ->01.03% (2,496B) 0x108ED7: merge_sort (sort_funcs.c:33)
+|           ->01.03% (2,496B) in 2 places, all below massif's threshold (1.00%)
+|             
+->33.13% (79,980B) 0x108E83: merge_sort (sort_funcs.c:25)
+| ->16.57% (40,000B) 0x108AC7: main (main.c:46)
+| | 
+| ->16.56% (39,980B) 0x108ED7: merge_sort (sort_funcs.c:33)
+|   ->08.29% (20,000B) 0x108AC7: main (main.c:46)
+|   | 
+|   ->08.28% (19,980B) 0x108ED7: merge_sort (sort_funcs.c:33)
+|     ->04.14% (10,000B) 0x108AC7: main (main.c:46)
+|     | 
+|     ->04.13% (9,980B) 0x108ED7: merge_sort (sort_funcs.c:33)
+|       ->02.07% (5,000B) 0x108AC7: main (main.c:46)
+|       | 
+|       ->02.06% (4,980B) 0x108ED7: merge_sort (sort_funcs.c:33)
+|         ->01.04% (2,500B) 0x108AC7: main (main.c:46)
+|         | 
+|         ->01.03% (2,480B) 0x108ED7: merge_sort (sort_funcs.c:33)
+|           ->01.03% (2,480B) in 2 places, all below massif's threshold (1.00%)
+|             
+->00.42% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  4      2,288,575          241,192          240,908           284            0
+  5      2,409,036          241,360          241,004           356            0
+  6      2,606,722          241,192          240,920           272            0
+  7      2,742,128          241,032          240,788           244            0
+  8      2,886,853          237,432          237,276           156            0
+  9      3,110,830          241,448          241,036           412            0
+ 10      3,276,778          241,392          241,008           384            0
+ 11      3,487,438          241,456          241,024           432            0
+ 12      3,643,763          241,400          241,024           376            0
+ 13      3,768,779          241,432          241,020           412            0
+ 14      3,907,090          240,296          240,092           204            0
+ 15      4,139,696          241,448          241,036           412            0
+ 16      4,269,571          211,080          211,024            56            0
+99.97% (211,024B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->37.90% (80,000B) 0x1089B3: main (main.c:34)
+| 
+->33.16% (70,000B) 0x108E8F: merge_sort (sort_funcs.c:26)
+| ->18.95% (40,000B) 0x108AC7: main (main.c:46)
+| | 
+| ->14.21% (30,000B) 0x108ED7: merge_sort (sort_funcs.c:33)
+| | ->09.48% (20,000B) 0x108AC7: main (main.c:46)
+| | | 
+| | ->04.74% (10,000B) 0x108ED7: merge_sort (sort_funcs.c:33)
+| | | ->04.74% (10,000B) 0x108AC7: main (main.c:46)
+| | | | 
+| | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->28.43% (60,000B) 0x108E83: merge_sort (sort_funcs.c:25)
+| ->18.95% (40,000B) 0x108AC7: main (main.c:46)
+| | 
+| ->09.48% (20,000B) 0x108ED7: merge_sort (sort_funcs.c:33)
+| | ->09.48% (20,000B) 0x108AC7: main (main.c:46)
+| | | 
+| | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.49% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 17      4,484,182          241,376          241,016           360            0
+ 18      4,664,666          241,288          240,964           324            0
+ 19      4,799,343          241,360          241,004           356            0
+ 20      5,033,252          241,416          241,012           404            0
+ 21      5,203,117          241,136          240,872           264            0
+ 22      5,369,619          241,432          241,016           416            0
+ 23      5,483,665          241,384          241,008           376            0
+ 24      5,717,627          241,352          240,996           356            0
+ 25      5,861,741          241,032          240,788           244            0
+ 26      6,052,712          241,416          241,012           404            0
+ 27      6,271,568          241,448          241,036           412            0
+ 28      6,524,740          181,064          181,024            40            0
+99.98% (181,024B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->44.18% (80,000B) 0x1089B3: main (main.c:34)
+| 
+->33.14% (60,000B) 0x108E8F: merge_sort (sort_funcs.c:26)
+| ->22.09% (40,000B) 0x108AC7: main (main.c:46)
+| | 
+| ->11.05% (20,000B) 0x108ED7: merge_sort (sort_funcs.c:33)
+| | ->11.05% (20,000B) 0x108AC7: main (main.c:46)
+| | | 
+| | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->22.09% (40,000B) 0x108E83: merge_sort (sort_funcs.c:25)
+| ->22.09% (40,000B) 0x108AC7: main (main.c:46)
+| | 
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.57% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 29      6,716,172          241,448          241,024           424            0
+ 30      6,862,590          240,776          240,552           224            0
+ 31      7,035,440          233,640          233,524           116            0
+ 32      7,144,779          241,432          241,020           412            0
+ 33      7,308,500          241,440          241,016           424            0
+ 34      7,535,633          233,640          233,524           116            0
+ 35      7,703,263          241,400          241,008           392            0
+ 36      7,895,401          241,032          240,784           248            0
+ 37      8,095,664          241,176          240,904           272            0
+ 38      8,314,209          241,440          241,016           424            0
+ 39      8,478,254          241,424          241,020           404            0
+99.83% (241,020B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->33.14% (80,008B) 0x108E8F: merge_sort (sort_funcs.c:26)
+| ->16.57% (40,000B) 0x108AC7: main (main.c:46)
+| | 
+| ->12.30% (29,684B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | ->08.28% (20,000B) 0x108AC7: main (main.c:46)
+| | | 
+| | ->02.14% (5,164B) 0x108ED7: merge_sort (sort_funcs.c:33)
+| | | ->02.14% (5,164B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | | | ->02.07% (5,000B) 0x108AC7: main (main.c:46)
+| | | | | 
+| | | | ->00.07% (164B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | 
+| | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->01.87% (4,520B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| |   ->01.07% (2,580B) 0x108ED7: merge_sort (sort_funcs.c:33)
+| |   | ->01.07% (2,580B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| |   | | ->01.04% (2,500B) 0x108AC7: main (main.c:46)
+| |   | | | 
+| |   | | ->00.03% (80B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   | | 
+| |   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   | 
+| |   ->00.80% (1,940B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->04.28% (10,324B) 0x108ED7: merge_sort (sort_funcs.c:33)
+|   ->04.28% (10,324B) 0x108EE7: merge_sort (sort_funcs.c:34)
+|   | ->04.14% (10,000B) 0x108AC7: main (main.c:46)
+|   | | 
+|   | ->00.13% (324B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->33.14% (80,000B) 0x1089B3: main (main.c:34)
+| 
+->33.13% (79,988B) 0x108E83: merge_sort (sort_funcs.c:25)
+| ->16.57% (40,000B) 0x108AC7: main (main.c:46)
+| | 
+| ->12.29% (29,668B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | ->08.28% (20,000B) 0x108AC7: main (main.c:46)
+| | | 
+| | ->02.14% (5,160B) 0x108ED7: merge_sort (sort_funcs.c:33)
+| | | ->02.14% (5,160B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | | | ->02.07% (5,000B) 0x108AC7: main (main.c:46)
+| | | | | 
+| | | | ->00.07% (160B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | 
+| | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->01.87% (4,508B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| |   ->01.07% (2,576B) 0x108ED7: merge_sort (sort_funcs.c:33)
+| |   | ->01.07% (2,576B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| |   | | ->01.04% (2,500B) 0x108AC7: main (main.c:46)
+| |   | | | 
+| |   | | ->00.03% (76B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   | | 
+| |   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   | 
+| |   ->00.80% (1,932B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->04.27% (10,320B) 0x108ED7: merge_sort (sort_funcs.c:33)
+|   ->04.27% (10,320B) 0x108EE7: merge_sort (sort_funcs.c:34)
+|   | ->04.14% (10,000B) 0x108AC7: main (main.c:46)
+|   | | 
+|   | ->00.13% (320B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.42% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 40      8,599,027          226,104          226,024            80            0
+ 41      8,743,120          241,272          240,960           312            0
+ 42      8,936,700          240,776          240,552           224            0
+ 43      9,103,297          241,472          241,032           440            0
+ 44      9,220,189          241,032          240,788           244            0
+ 45      9,356,678          241,448          241,024           424            0
+99.82% (241,024B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->33.14% (80,012B) 0x108E8F: merge_sort (sort_funcs.c:26)
+| ->16.57% (40,000B) 0x108AC7: main (main.c:46)
+| | 
+| ->13.90% (33,552B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | ->08.28% (20,000B) 0x108AC7: main (main.c:46)
+| | | 
+| | ->04.27% (10,316B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | | ->04.14% (10,000B) 0x108AC7: main (main.c:46)
+| | | | 
+| | | ->00.13% (316B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->01.34% (3,236B) 0x108ED7: merge_sort (sort_funcs.c:33)
+| |   ->01.34% (3,236B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| |   | ->01.07% (2,580B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| |   | | ->01.04% (2,500B) 0x108AC7: main (main.c:46)
+| |   | | | 
+| |   | | ->00.03% (80B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   | | 
+| |   | ->00.27% (656B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   | 
+| |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->02.68% (6,460B) 0x108ED7: merge_sort (sort_funcs.c:33)
+|   ->02.68% (6,460B) 0x108EE7: merge_sort (sort_funcs.c:34)
+|   | ->02.14% (5,156B) 0x108EE7: merge_sort (sort_funcs.c:34)
+|   | | ->02.07% (5,000B) 0x108AC7: main (main.c:46)
+|   | | | 
+|   | | ->00.06% (156B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->00.54% (1,304B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->33.13% (80,000B) 0x1089B3: main (main.c:34)
+| 
+->33.13% (79,988B) 0x108E83: merge_sort (sort_funcs.c:25)
+| ->16.57% (40,000B) 0x108AC7: main (main.c:46)
+| | 
+| ->13.89% (33,540B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | ->08.28% (20,000B) 0x108AC7: main (main.c:46)
+| | | 
+| | ->04.27% (10,316B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | | ->04.14% (10,000B) 0x108AC7: main (main.c:46)
+| | | | 
+| | | ->00.13% (316B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->01.34% (3,224B) 0x108ED7: merge_sort (sort_funcs.c:33)
+| |   ->01.34% (3,224B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| |   | ->01.07% (2,576B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| |   | | ->01.04% (2,500B) 0x108AC7: main (main.c:46)
+| |   | | | 
+| |   | | ->00.03% (76B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   | | 
+| |   | ->00.27% (648B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   | 
+| |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->02.67% (6,448B) 0x108ED7: merge_sort (sort_funcs.c:33)
+|   ->02.67% (6,448B) 0x108EE7: merge_sort (sort_funcs.c:34)
+|   | ->02.14% (5,156B) 0x108EE7: merge_sort (sort_funcs.c:34)
+|   | | ->02.07% (5,000B) 0x108AC7: main (main.c:46)
+|   | | | 
+|   | | ->00.06% (156B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->00.54% (1,292B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.42% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 46      9,575,463          241,448          241,024           424            0
+ 47      9,723,728          241,336          240,996           340            0
+ 48      9,969,315          241,296          240,976           320            0
+ 49     10,135,603          241,448          241,028           420            0
+ 50     10,162,868          241,448          241,036           412            0
+ 51     10,197,921          233,640          233,524           116            0
+99.95% (233,524B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->34.24% (80,000B) 0x1089B3: main (main.c:34)
+| 
+->33.17% (77,500B) 0x108E8F: merge_sort (sort_funcs.c:26)
+| ->17.12% (40,000B) 0x108AC7: main (main.c:46)
+| | 
+| ->14.98% (35,000B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | ->08.56% (20,000B) 0x108AC7: main (main.c:46)
+| | | 
+| | ->06.42% (15,000B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | | ->04.28% (10,000B) 0x108AC7: main (main.c:46)
+| | | | 
+| | | ->02.14% (5,000B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | | | ->02.14% (5,000B) 0x108AC7: main (main.c:46)
+| | | | | 
+| | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | 
+| | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->01.07% (2,500B) 0x108ED7: merge_sort (sort_funcs.c:33)
+|   ->01.07% (2,500B) 0x108EE7: merge_sort (sort_funcs.c:34)
+|   | ->01.07% (2,500B) 0x108EE7: merge_sort (sort_funcs.c:34)
+|   | | ->01.07% (2,500B) 0x108EE7: merge_sort (sort_funcs.c:34)
+|   | | | ->01.07% (2,500B) 0x108AC7: main (main.c:46)
+|   | | | | 
+|   | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->32.10% (75,000B) 0x108E83: merge_sort (sort_funcs.c:25)
+| ->17.12% (40,000B) 0x108AC7: main (main.c:46)
+| | 
+| ->14.98% (35,000B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | ->08.56% (20,000B) 0x108AC7: main (main.c:46)
+| | | 
+| | ->06.42% (15,000B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | | ->04.28% (10,000B) 0x108AC7: main (main.c:46)
+| | | | 
+| | | ->02.14% (5,000B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | | | ->02.14% (5,000B) 0x108AC7: main (main.c:46)
+| | | | | 
+| | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | 
+| | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.44% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 52     10,225,188          241,176          240,904           272            0
+ 53     10,252,556          241,032          240,788           244            0
+ 54     10,279,861          241,384          241,008           376            0
+ 55     10,307,245          241,432          241,020           412            0
+ 56     10,334,508          241,472          241,024           448            0
+ 57     10,361,864          241,352          240,996           356            0
+ 58     10,389,155          241,424          241,020           404            0
+ 59     10,416,437          241,448          241,036           412            0
+ 60     10,443,778          241,368          241,000           368            0
+ 61     10,471,057          241,416          241,012           404            0
+99.83% (241,012B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->33.14% (80,008B) 0x108E8F: merge_sort (sort_funcs.c:26)
+| ->16.57% (40,000B) 0x108AC7: main (main.c:46)
+| | 
+| ->16.13% (38,932B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | ->08.28% (20,000B) 0x108AC7: main (main.c:46)
+| | | 
+| | ->07.77% (18,764B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | | ->04.14% (10,000B) 0x108AC7: main (main.c:46)
+| | | | 
+| | | ->03.63% (8,756B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | | | ->02.07% (5,000B) 0x108AC7: main (main.c:46)
+| | | | | 
+| | | | ->01.55% (3,752B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | | | | ->01.04% (2,500B) 0x108AC7: main (main.c:46)
+| | | | | | 
+| | | | | ->00.52% (1,252B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | 
+| | | | ->00.00% (4B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | 
+| | | ->00.00% (8B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->00.07% (168B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.45% (1,076B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->33.14% (80,000B) 0x1089B3: main (main.c:34)
+| 
+->33.13% (79,980B) 0x108E83: merge_sort (sort_funcs.c:25)
+| ->16.57% (40,000B) 0x108AC7: main (main.c:46)
+| | 
+| ->16.12% (38,916B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | ->08.28% (20,000B) 0x108AC7: main (main.c:46)
+| | | 
+| | ->07.77% (18,752B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | | ->04.14% (10,000B) 0x108AC7: main (main.c:46)
+| | | | 
+| | | ->03.62% (8,748B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | | | ->02.07% (5,000B) 0x108AC7: main (main.c:46)
+| | | | | 
+| | | | ->01.55% (3,748B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | | | | ->01.04% (2,500B) 0x108AC7: main (main.c:46)
+| | | | | | 
+| | | | | ->00.52% (1,248B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | | 
+| | | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | | 
+| | | ->00.00% (4B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->00.07% (164B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.44% (1,064B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.42% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 62     10,498,382          241,320          240,984           336            0
+ 63     10,525,686          241,368          240,996           372            0
+ 64     10,553,489          240,280          240,084           196            0
+ 65     10,580,826          241,400          241,012           388            0
+ 66     10,608,223          241,448          241,024           424            0
+ 67     10,635,520          241,424          241,024           400            0
+ 68     10,662,830          241,448          241,036           412            0
+ 69     10,698,015          233,640          233,524           116            0
+ 70     10,729,279          226,104          226,024            80            0
+ 71     10,791,611          211,080          211,024            56            0
+99.97% (211,024B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->37.90% (80,000B) 0x1089B3: main (main.c:34)
+| 
+->33.16% (70,000B) 0x108E8F: merge_sort (sort_funcs.c:26)
+| ->18.95% (40,000B) 0x108AC7: main (main.c:46)
+| | 
+| ->14.21% (30,000B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | ->09.48% (20,000B) 0x108AC7: main (main.c:46)
+| | | 
+| | ->04.74% (10,000B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | | ->04.74% (10,000B) 0x108AC7: main (main.c:46)
+| | | | 
+| | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->28.43% (60,000B) 0x108E83: merge_sort (sort_funcs.c:25)
+| ->18.95% (40,000B) 0x108AC7: main (main.c:46)
+| | 
+| ->09.48% (20,000B) 0x108EE7: merge_sort (sort_funcs.c:34)
+| | ->09.48% (20,000B) 0x108AC7: main (main.c:46)
+| | | 
+| | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.49% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 72     10,916,109          181,064          181,024            40            0
+ 73     11,165,207          121,048          121,024            24            0
+ 74     11,334,621            1,032            1,024             8            0
